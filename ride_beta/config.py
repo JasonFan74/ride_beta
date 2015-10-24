@@ -5,3 +5,5 @@ class Config(object):
     CSRF_ENABLED = True
     SECRET_KEY = 'secret'
     SQLALCHEMY_DATABASE_URI = os.environ['DB_URL']
+
+print(os.environ['DB_URL'])
