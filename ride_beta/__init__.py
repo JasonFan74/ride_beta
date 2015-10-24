@@ -9,10 +9,14 @@ db = MongoEngine(app)
 
 def register_blueprints(app):
     # Prevents circular imports
-    from ride_beta.views import posts
-    app.register_blueprint(posts)
+    from ride_beta.views import rides
+    app.register_blueprint(rides)
 
 register_blueprints(app)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
 
 if __name__ == '__main__':
     app.run()

@@ -4,7 +4,6 @@ from ride_beta.models import Ride
 
 rides = Blueprint('rides', __name__, template_folder='templates')
 
-
 class ListView(MethodView):
 
     def get(self):
