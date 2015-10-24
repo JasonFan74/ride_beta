@@ -18,5 +18,4 @@ manager.add_command("runserver", Server(
 #ßmanager.add_command("testentries", addTestEntries())
 
 if __name__ == "__main__":
-    print("run manager")
     manager.run()

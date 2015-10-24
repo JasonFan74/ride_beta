@@ -19,5 +19,6 @@ class DetailView(MethodView):
 
 
 # Register the urls
+#rides.add_url_rule('/', view_func=TestView.as_view('test'))
 rides.add_url_rule('/', view_func=ListView.as_view('list'))
 rides.add_url_rule('/<slug>/', view_func=DetailView.as_view('detail'))

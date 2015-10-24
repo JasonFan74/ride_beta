@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for ride in rides %}
+      <h2><a href="{{ url_for('rides.detail', slug=ride.slug) }}">{{ ride.title }}</a></h2>
+      <p>{{ ride.body|truncate(100) }}</p>
+      <p>
+        {{ ride.created_at.strftime('%H:%M %Y-%m-%d') }} |
+        {% with total=ride.comments|length %}
+            {{ total }} comment {%- if total > 1 %}s{%- endif -%}
+        {% endwith %}
+      </p>
+    {% endfor %}
+{% endblock %}
